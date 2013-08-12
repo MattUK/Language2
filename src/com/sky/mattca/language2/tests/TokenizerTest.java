@@ -1,9 +1,8 @@
 package com.sky.mattca.language2.tests;
 
-import com.sky.mattca.language2.Handler;
-import com.sky.mattca.language2.tokenizer2.Token;
-import com.sky.mattca.language2.tokenizer2.TokenString;
-import com.sky.mattca.language2.tokenizer2.Tokenizer;
+import com.sky.mattca.language2.tokenizer.Token;
+import com.sky.mattca.language2.tokenizer.TokenString;
+import com.sky.mattca.language2.tokenizer.Tokenizer;
 import junit.framework.TestCase;
 
 import java.util.List;

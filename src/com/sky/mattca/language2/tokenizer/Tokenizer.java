@@ -3,31 +3,58 @@ package com.sky.mattca.language2.tokenizer;
 import com.sky.mattca.language2.Handler;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+/**
+ * The Tokenizer.
+ */
 public class Tokenizer {
-    public int currentLine, currentPosition;
+
+    // The current position and line being analysed.
+    private int currentPosition, currentLine;
+    // The lines being lexed.
     private List<String> source;
 
+    /**
+     * Construct a new Tokenizer.
+     */
     public Tokenizer() {
-        source = new ArrayList<>();
         currentLine = 0;
         currentPosition = 0;
+        source = new ArrayList<>();
     }
 
+    /**
+     * Add a source code line to this tokenizer.
+     * @param line The line of input code.
+     */
     public void addSourceLine(String line) {
         source.add(line);
     }
 
+    /**
+     * Checks if the specified character is valid as an identifier.
+     * @param c The character to check.
+     * @return True if the character can be used as an identifier, false otherwise.
+     */
     private boolean isIdentifierCharacter(char c) {
         return Character.isLetterOrDigit(c) | (c == '_');
     }
 
+    /**
+     * Consumes a number of characters from the current line, and increments the position.
+     * @param length The number of characters to consume.
+     */
     private void consume(int length) {
         source.set(currentLine, source.get(currentLine).substring(length));
         currentPosition += length;
     }
 
+    /**
+     * Tokenizes an identifier string into a token.
+     * @return The new identifier token.
+     */
     private Token tokenizeIdentifier() {
         String identifierLine = source.get(currentLine);
         int identifierLength = 0;
@@ -38,13 +65,13 @@ public class Tokenizer {
         Token token = new Token(TokenType.IDENTIFIER, identifierLine.substring(0, identifierLength), currentLine, currentPosition);
         consume(identifierLength);
 
-        if (token.contents.equals("true") || token.contents.equals("false")) {
-            token.type = TokenType.BOOL_LITERAL;
-        }
-
         return token;
     }
 
+    /**
+     * Tokenizes a string literal into a token.
+     * @return The new string literal token.
+     */
     private Token tokenizeStringLiteral() {
         String stringLine = source.get(currentLine);
         int stringLength = 0;
@@ -66,6 +93,10 @@ public class Tokenizer {
         return token;
     }
 
+    /**
+     * Tokenizes a numerical (integer or float) literal into a token.
+     * @return The new numerical literal token.
+     */
     private Token tokenizeNumericalLiteral() {
         String numberLine = source.get(currentLine);
         int numberLength = 0;
@@ -98,108 +129,25 @@ public class Tokenizer {
         return token;
     }
 
-    private char[] operators = {'+', '-', '*', '/', '%', '^', ':', '=', '>', '<', '&', '|', '~'};
-
-    private boolean isOperator(char c) {
-        for (char o : operators) {
-            if (c == o) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private Token tokenizeOperator() {
-        String operatorLine = source.get(currentLine);
-        boolean isOp = isOperator(operatorLine.charAt(0));
-
-        if (!isOp) {
-            Handler.reportError(new Handler.BuildError(3, currentLine, currentPosition, Character.toString(operatorLine.charAt(0))));
-            return new Token();
-        }
-
-        consume(1);
-
-        TokenType type = TokenType.NONE;
-        String contents = "";
-        char operator = operatorLine.charAt(0);
-        switch (operator) {
-            case '+':
-                type = TokenType.OP_ADD;
-                break;
-            case '-':
-                type = TokenType.OP_SUB;
-                break;
-            case '*':
-                type = TokenType.OP_MUL;
-                break;
-            case '/':
-                type = TokenType.OP_DIV;
-                break;
-            case '%':
-                type = TokenType.OP_MOD;
-                break;
-            case '^':
-                type = TokenType.OP_POW;
-                break;
-            case ':':
-                type = TokenType.OP_ASSIGNMENT;
-                break;
-            case '>':
-                type = TokenType.OP_GREATER_THAN;
-                break;
-            case '<':
-                type = TokenType.OP_LESS_THAN;
-                break;
-            case '&':
-                type = TokenType.OP_LOGICAL_AND;
-                break;
-            case '|':
-                type = TokenType.OP_LOGICAL_OR;
-                break;
-            case '~':
-                type = TokenType.OP_CONCATENATE;
-                break;
-            default:
-                break;
-        }
-
-        contents = Character.toString(operator);
-
-        operatorLine = source.get(currentLine);
-        if (operatorLine.length() > 0 && operatorLine.charAt(0) == '=') {
-            switch (operator) {
-                case '=':
-                    type = TokenType.OP_DOUBLE_EQUALS;
-                    contents = "==";
-                    consume(1);
-                    break;
-                case '>':
-                    type = TokenType.OP_GREATER_EQ_TO;
-                    contents = ">=";
-                    consume(1);
-                    break;
-                case '<':
-                    type = TokenType.OP_LESS_EQ_TO;
-                    contents = "<=";
-                    consume(1);
-                    break;
-                default:
-                    Handler.reportError(new Handler.BuildError(3, currentLine, currentPosition, "="));
-                    return new Token();
-            }
-        }
-
-        if (contents.equals("=")) {
-            Handler.reportError(new Handler.BuildError(5, currentLine, currentPosition));
-        }
-
-        return new Token(type, contents, currentLine, currentPosition);
-    }
-
+    /**
+     * Tokenizes the line pointed to by the currentLine variable.
+     * @return A TokenString containing the current line.
+     */
     private TokenString tokenizeCurrentLine() {
-        TokenString line = new TokenString();
+        TokenString tokenString = new TokenString();
         boolean finishedLine = false;
+
+        // Sorts through the list of TokenTypes, ordering them from longest to shortest.
+        TokenType[] types = TokenType.values();
+        Arrays.sort(types, (o1, o2) -> {
+            if (o1.length() > o2.length()) {
+                return -1;
+            } else if (o1.length() == o2.length()) {
+                return 0;
+            } else {
+                return 1;
+            }
+        });
 
         while (!finishedLine) {
             if (source.get(currentLine).length() == 0) {
@@ -207,60 +155,43 @@ public class Tokenizer {
                 continue;
             }
 
-            char c = source.get(currentLine).charAt(0);
-            if (source.get(currentLine).length() > 2 && (c == '/' && source.get(currentLine).charAt(1) == '/')) {
-                finishedLine = true; // Skip line
-                continue;
-            } else if (Character.isDigit(c)) {
-                line.append(tokenizeNumericalLiteral());
-            } else if (Character.isLetter(c) || c == '_') {
-                line.append(tokenizeIdentifier());
-            } else if (c == '"') {
-                line.append(tokenizeStringLiteral());
-            } else if (isOperator(c)) {
-                line.append(tokenizeOperator());
-            } else if (c == ',') {
-                line.append(new Token(TokenType.SEPARATOR, ",", currentLine, currentPosition));
-                consume(1);
-            } else if (c == '(') {
-                line.append(new Token(TokenType.OPEN_BRACKET, "(", currentLine, currentPosition));
-                consume(1);
-            } else if (c == ')') {
-                line.append(new Token(TokenType.CLOSE_BRACKET, ")", currentLine, currentPosition));
-                consume(1);
-            } else if (c == '[') {
-                line.append(new Token(TokenType.OPEN_SQUARE_BRACKET, "[", currentLine, currentPosition));
-                consume(1);
-            } else if (c == ']') {
-                line.append(new Token(TokenType.CLOSE_SQUARE_BRACKET, "]", currentLine, currentPosition));
-                consume(1);
-            } else if (c == '{') {
-                line.append(new Token(TokenType.OPEN_CURVY_BRACE, "{", currentLine, currentPosition));
-                consume(1);
-            } else if (c == '}') {
-                line.append(new Token(TokenType.CLOSED_CURVY_BRACE, "}", currentLine, currentPosition));
-                consume(1);
-            } else if (c == ';') {
-                line.append(new Token(TokenType.END_STATEMENT, ";", currentLine, currentPosition));
-                consume(1);
-            } else if (c == '.') {
-                line.append(new Token(TokenType.PERIOD, ".", currentLine, currentPosition));
-                consume(1);
-            } else if (Character.isWhitespace(c)) {
-                line.append(new Token(TokenType.WHITESPACE, " ", currentLine, currentPosition));
-                consume(1);
-            } else {
-                Handler.reportError(new Handler.BuildError(3, currentLine, currentPosition, Character.toString(source.get(currentLine).charAt(0))));
-                consume(1);
+            boolean matched = false;
+            for (TokenType t : types) {
+                if (t.match(source.get(currentLine))) {
+                    int position = currentPosition;
+                    consume(t.length());
+                    tokenString.append(new Token(t, t.tokenValue, currentLine, position));
+                    matched = true;
+                    break;
+                }
+            }
+
+            if (!matched) {
+                if (Character.isDigit(source.get(currentLine).charAt(0))) {
+                    tokenString.append(tokenizeNumericalLiteral());
+                } else if (isIdentifierCharacter(source.get(currentLine).charAt(0))) {
+                    tokenString.append(tokenizeIdentifier());
+                } else if (source.get(currentLine).charAt(0) == '"') {
+                    tokenString.append(tokenizeStringLiteral());
+                } else if (Character.isWhitespace(source.get(currentLine).charAt(0))) {
+                    tokenString.append(new Token(TokenType.WHITESPACE, "", currentLine, currentPosition));
+                    consume(1);
+                } else {
+                    Handler.reportError(new Handler.BuildError(3, currentLine, currentPosition, Character.toString(source.get(currentLine).charAt(0))));
+                    consume(1);
+                }
             }
 
             Handler.abortIfErrors();
-
         }
 
-        return line;
+        return tokenString;
     }
 
+    /**
+     * Converts the entire line(s) of source code into a list of token strings for parsing.
+     * @return A list of TokenStrings, ready to be parsed.
+     */
     public List<TokenString> start() {
         List<TokenString> lines = new ArrayList<>();
 
