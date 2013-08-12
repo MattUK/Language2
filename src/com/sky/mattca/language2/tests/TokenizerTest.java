@@ -1,9 +1,9 @@
 package com.sky.mattca.language2.tests;
 
 import com.sky.mattca.language2.Handler;
-import com.sky.mattca.language2.tokenizer.Token;
-import com.sky.mattca.language2.tokenizer.TokenString;
-import com.sky.mattca.language2.tokenizer.Tokenizer;
+import com.sky.mattca.language2.tokenizer2.Token;
+import com.sky.mattca.language2.tokenizer2.TokenString;
+import com.sky.mattca.language2.tokenizer2.Tokenizer;
 import junit.framework.TestCase;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class TokenizerTest extends TestCase {
         String identifierLine = "function helloWorld";
         String integerLine = "1024";
         String floatLine = "3.14159265";
-        String stringLine = "\"Hello, World!\" + - / * . ^ % =";
+        String stringLine = "\"Hello, World!\" + - / * . ^ % : == >=";
 
         tokenizer.addSourceLine(identifierLine);
         tokenizer.addSourceLine(integerLine);
