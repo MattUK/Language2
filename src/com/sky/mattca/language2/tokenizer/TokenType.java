@@ -39,6 +39,8 @@ public enum TokenType {
     CLOSE_CURVY_BRACKET("}"),
     END_STATEMENT(";"),
     PERIOD("."),
+    TYPE_PARAM_OPEN("<"),
+    TYPE_PARAM_CLOSE(">"),
     NONE,
 
     // Keywords
