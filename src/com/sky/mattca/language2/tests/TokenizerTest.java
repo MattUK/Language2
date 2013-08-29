@@ -21,11 +21,13 @@ public class TokenizerTest extends TestCase {
         String integerLine = "1024";
         String floatLine = "3.14159265";
         String stringLine = "\"Hello, World!\" + - / * . ^ % : == >=";
+        String typeParamLine = "public class TestClass<T...>";
 
         tokenizer.addSourceLine(identifierLine);
         tokenizer.addSourceLine(integerLine);
         tokenizer.addSourceLine(floatLine);
         tokenizer.addSourceLine(stringLine);
+        tokenizer.addSourceLine(typeParamLine);
 
         List<TokenString> result = tokenizer.start();
         for (TokenString str : result) {

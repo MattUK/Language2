@@ -39,8 +39,7 @@ public enum TokenType {
     CLOSE_CURVY_BRACKET("}"),
     END_STATEMENT(";"),
     PERIOD("."),
-    TYPE_PARAM_OPEN("<"),
-    TYPE_PARAM_CLOSE(">"),
+    RANGE("..."),
     NONE,
 
     // Keywords
@@ -48,7 +47,7 @@ public enum TokenType {
     CLASS("class"),
     FUNCTION("function"),
 
-    VARIABLE("let"),
+    VARIABLE("var"),
 
     IF("if"),
     ELSE_IF("elseif"),

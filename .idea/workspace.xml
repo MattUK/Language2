@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Language2.iws" />
@@ -16,9 +17,9 @@
     <file path="/fragment.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1374952373328" ignored="false" />
     <file path="/Handler.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1374953890622" ignored="false" />
     <file path="/Tokenizer.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376346022393" ignored="false" />
-    <file path="/TokenType.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377806219859" ignored="false" />
-    <file path="/TokenizerTest.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1374952926171" ignored="false" />
-    <file path="/Dummy.txt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377805863391" ignored="false" />
+    <file path="/TokenType.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377812619466" ignored="false" />
+    <file path="/TokenizerTest.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377812572141" ignored="false" />
+    <file path="/Dummy.txt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377817421097" ignored="false" />
     <file path="/Parser2.kt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376406505274" ignored="false" />
     <file path="/Parser.kt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376406676848" ignored="false" />
     <file path="$PROJECT_DIR$/../../Idea Projects/LambdaTest/src/com/sky/mattca/lambdatest/LambdaTest.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376440673850" ignored="false" />
@@ -92,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tokenizer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tokenizer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="0" selection-start="6765" selection-end="6765" vertical-scroll-proportion="1.0194286">
+            <state line="138" column="0" selection-start="4512" selection-end="4512" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,16 +105,16 @@
       <file leaf-file-name="TokenizerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+            <state line="19" column="54" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokenType.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TokenType.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="30" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+            <state line="73" column="0" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.4045714">
               <folding />
             </state>
           </provider>
@@ -122,7 +123,7 @@
       <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,7 +132,7 @@
       <file leaf-file-name="TokenString.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="3" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="22" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/Handler.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer2/Token.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer2/TokenString.java" />
-        <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer2/TokenType.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer2/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java" />
@@ -170,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/test.kt" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java" />
       </list>
     </option>
@@ -228,6 +229,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,6 +306,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Language2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Language2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,7 +335,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,7 +345,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../D/CCL2/CCL2/util.d" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -531,7 +554,11 @@
       <created>1376440790606</created>
       <updated>1376440790606</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Started work on parser">
+      <created>1377806331219</created>
+      <updated>1377806331219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -552,7 +579,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21558164" sideWeight="0.67193675" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21558164" sideWeight="0.67074525" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -604,7 +631,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fsdh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started work on parser" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -621,6 +648,7 @@
     <MESSAGE value="Started work on parser." />
     <MESSAGE value="Tested parser as a Kotlin code file" />
     <MESSAGE value="fsdh" />
+    <MESSAGE value="Started work on parser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -698,27 +726,6 @@
         <state line="66" column="51" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.513173" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="3" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="33" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
@@ -726,16 +733,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="30" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+        <state line="11" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tests/TokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="54" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="6765" selection-end="6765" vertical-scroll-proportion="1.0194286">
+        <state line="138" column="0" selection-start="4512" selection-end="4512" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="35" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="0" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.4045714">
           <folding />
         </state>
       </provider>
