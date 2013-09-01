@@ -1,5 +1,8 @@
 package com.sky.mattca.language2.parser;
 
+import com.sky.mattca.language2.tokenizer.TokenString;
+import static com.sky.mattca.language2.parser.StatementParser.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Matt
@@ -8,7 +11,6 @@ package com.sky.mattca.language2.parser;
  * To change this template use File | Settings | File Templates.
  */
 public class Parser {
-
 
 
 }

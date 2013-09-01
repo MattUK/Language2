@@ -40,6 +40,7 @@ public enum TokenType {
     END_STATEMENT(";"),
     PERIOD("."),
     RANGE("..."),
+    LAMBDA_ARROW("->"),
     NONE,
 
     // Keywords
