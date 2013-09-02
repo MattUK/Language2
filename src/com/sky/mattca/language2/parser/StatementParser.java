@@ -2,6 +2,8 @@ package com.sky.mattca.language2.parser;
 
 import com.sky.mattca.language2.tokenizer.TokenString;
 
+import java.util.function.Function;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Matt
@@ -15,11 +17,11 @@ public interface StatementParser {
 
     public boolean doParse(TokenString string);
 
-    public default boolean parseExpression(TokenString string) {
+    public static boolean parseExpression(TokenString string) {
         return false;
     }
 
-    public default boolean parseConditional(TokenString string) {
+    public static boolean parseConditional(TokenString string) {
         return false;
     }
 
