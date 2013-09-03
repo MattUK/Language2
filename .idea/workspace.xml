@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/ParserHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/Statement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/StatementParser.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/parser/StatementParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Token.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/TokenString.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java" afterPath="$PROJECT_DIR$/src/com/sky/mattca/language2/tokenizer/Tokenizer.java" />
@@ -19,7 +16,7 @@
     <file path="/Tokenizer.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376346022393" ignored="false" />
     <file path="/TokenType.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377892407395" ignored="false" />
     <file path="/TokenizerTest.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377812572141" ignored="false" />
-    <file path="/Dummy.txt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1378159483608" ignored="false" />
+    <file path="/Dummy.txt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1378250650164" ignored="false" />
     <file path="/Parser2.kt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376406505274" ignored="false" />
     <file path="/Parser.kt" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1376406676848" ignored="false" />
     <file path="$PROJECT_DIR$/../../Idea Projects/LambdaTest/src/com/sky/mattca/lambdatest/LambdaTest.java" changelist="20cfc3ff-89c7-4adc-a1cf-f7502dc4dfd2" time="1377893024694" ignored="false" />
@@ -165,7 +162,7 @@
       <file leaf-file-name="ParserHelper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/parser/ParserHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="24" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.019428572">
+            <state line="76" column="0" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.019428572">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -282,6 +279,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -289,10 +287,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Language2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -391,7 +385,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,7 +395,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="options.lastSelected" value="Groovy compiler" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../D/CCL2/CCL2/util.d" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -623,7 +616,11 @@
       <created>1378061992670</created>
       <updated>1378061992670</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Started work on parser">
+      <created>1378159511719</created>
+      <updated>1378159511719</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -826,7 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sky/mattca/language2/parser/ParserHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="24" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.019428572">
+        <state line="76" column="0" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.019428572">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
