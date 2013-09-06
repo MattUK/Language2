@@ -143,8 +143,6 @@ public class ParserHelper {
         return this;
     }
 
-    public ParserHelper repeatMatchUntil
-
     public ParserHelper whitespace() {
         return matchConsume(TokenType.WHITESPACE);
     }

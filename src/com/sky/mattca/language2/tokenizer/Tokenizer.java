@@ -4,6 +4,7 @@ import com.sky.mattca.language2.Handler;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -139,15 +140,7 @@ public class Tokenizer {
 
         // Sorts through the list of TokenTypes, ordering them from longest to shortest.
         TokenType[] types = TokenType.values();
-        Arrays.sort(types, (o1, o2) -> {
-            if (o1.length() > o2.length()) {
-                return -1;
-            } else if (o1.length() == o2.length()) {
-                return 0;
-            } else {
-                return 1;
-            }
-        });
+        Arrays.sort(types, Comparator.comparing((TokenType t) -> t.length()).reversed());
 
         while (!finishedLine) {
             if (source.get(currentLine).length() == 0) {

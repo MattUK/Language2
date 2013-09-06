@@ -2,8 +2,6 @@ package com.sky.mattca.language2.parser;
 
 import com.sky.mattca.language2.tokenizer.TokenString;
 
-import java.util.function.Function;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Matt
