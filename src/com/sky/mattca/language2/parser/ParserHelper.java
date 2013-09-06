@@ -94,7 +94,7 @@ public class ParserHelper {
     }
 
     public ParserHelper matchConsume(final String contentToMatch) {
-        ParserOperationHandler<String> parserOperationHandler = new ParserOperationHandler<>((t, s) -> {
+        final ParserOperationHandler<String> parserOperationHandler = new ParserOperationHandler<>((t, s) -> {
             ParseOperationResult result;
 
             if (t.peek().contents.equals(s)) {
@@ -114,7 +114,7 @@ public class ParserHelper {
     }
 
     public ParserHelper matchConsume(final TokenType typeToMatch) {
-        ParserOperationHandler<TokenType> parserOperationHandler = new ParserOperationHandler<>((t, type) -> {
+        final ParserOperationHandler<TokenType> parserOperationHandler = new ParserOperationHandler<>((t, type) -> {
             ParseOperationResult result;
 
             if (t.match(type)) {
@@ -132,6 +132,18 @@ public class ParserHelper {
 
         return this;
     }
+
+    public ParserHelper optionalConsume(final String contentToMatch) {
+        // TODO: Finish!
+        return this;
+    }
+
+    public ParserHelper optionalConsume(final TokenType typeToMatch) {
+        // TODO: Finish
+        return this;
+    }
+
+    public ParserHelper repeatMatchUntil
 
     public ParserHelper whitespace() {
         return matchConsume(TokenType.WHITESPACE);

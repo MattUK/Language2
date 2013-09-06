@@ -1,6 +1,8 @@
 package com.sky.mattca.language2.parser;
 
 import com.sky.mattca.language2.tokenizer.TokenString;
+import com.sky.mattca.language2.tokenizer.TokenType;
+
 import static com.sky.mattca.language2.parser.StatementParser.*;
 
 /**
@@ -12,5 +14,11 @@ import static com.sky.mattca.language2.parser.StatementParser.*;
  */
 public class Parser {
 
+    static {
+        ParserHelper parser = ParserHelper.start()
+                .matchConsume(TokenType.FUNCTION)
+                .matchConsume(TokenType.OPEN_BRACKET)
+
+    }
 
 }
