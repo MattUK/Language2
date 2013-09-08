@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Matt
- * Date: 06/09/13
- * Time: 20:22
- * To change this template use File | Settings | File Templates.
+ * A class that is used to generate, and store, Parse Helper functions.
+ *
+ * All parsing functions are stored as Operations, which are executed one after the other
+ * on a TokenString. The results are returned in the form of a list of statements.
  */
 public class CompositedParserHelper {
 
@@ -52,7 +51,7 @@ public class CompositedParserHelper {
 
     @FunctionalInterface
     private interface ParseOperation {
-        public ParseOperationResult operate(ParseState state, TokenString previousResult, List<Statement> statements);
+        public ParseOperationResult operate(ParseOperationResult previousResult);
 
         /**
          * Merges two ParseOperation's, executing this one, followed by the next.
@@ -61,15 +60,19 @@ public class CompositedParserHelper {
          * @return A chained ParseOperation, combining this one and the next.
          */
         public default ParseOperation andThen(ParseOperation after) {
-            return (state, result, statements) -> {
-                ParseOperationResult operationResult = operate(state, result, statements);
-                return after.operate(operationResult.getState(), operationResult.getPreviousResult(), operationResult.getStatements());
+            return (previousResult) -> {
+                ParseOperationResult operationResult = operate(previousResult);
+                return after.operate(operationResult);
             };
         }
     }
 
     private ParseOperation matchingOperation;
 
+    /**
+     * Creates a new ParserHelper, containing a list of parse-related operations (created by static methods).
+     * @param operations The operations to execute on a provided TokenString, resulting in either a success or failure.
+     */
     public CompositedParserHelper(ParseOperation... operations) {
         // Chain all operations into one
         matchingOperation = operations[0];
@@ -80,7 +83,8 @@ public class CompositedParserHelper {
     }
 
     public ParseOperationResult performOn(TokenString string) {
-        return matchingOperation.operate(ParseState.SUCCESS, string, new ArrayList<>());
+        ParseOperationResult initialState = new ParseOperationResult(ParseState.SUCCESS, string, new ArrayList<>());
+        return matchingOperation.operate(initialState);
     }
 
 }
